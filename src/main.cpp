@@ -10,21 +10,21 @@ const int MOTOR2_PWM_PIN = 4;
 Servo myservo;
 
 void setup() {
- Serial.begin(115200);
- PS4.begin(""); //PS4のアドレス入れる
+   Serial.begin(115200);
+   PS4.begin(""); //PS4のアドレス入れる
 
- ledcSetup(1,12800,8);
- ledcSetup(2,12800,8);
+   ledcSetup(1,12800,8);
+   ledcSetup(2,12800,8);
 
- ledcAttachPin(MOTOR1_DIR_PIN,1);
- ledcAttachPin(MOTOR2_DIR_PIN,2);
+   ledcAttachPin(MOTOR1_DIR_PIN,1);
+   ledcAttachPin(MOTOR2_DIR_PIN,2);
 
- pinMode(MOTOR1_DIR_PIN, OUTPUT);
- pinMode(MOTOR2_DIR_PIN, OUTPUT);
+   pinMode(MOTOR1_DIR_PIN, OUTPUT);
+   pinMode(MOTOR2_DIR_PIN, OUTPUT);
 
- myservo.attach(4);//4PINにサーボモーターをつなぐ
+   myservo.attach(4);//4PINにサーボモーターをつなぐ
 
- Serial.println("Ready.");
+   Serial.println("Ready.");
 }
 
 void loop() {
